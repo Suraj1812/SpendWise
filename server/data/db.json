@@ -1,0 +1,175 @@
+{
+  "users": [
+    {
+      "id": "demo-user",
+      "name": "Suraj",
+      "email": "demo@spendwise.app",
+      "passwordHash": "$2b$10$gTJ/Bum.sVtP8/Xj5oqzCe/LKT0st/XpbOf/g6dym1okc2dvUBQra",
+      "monthlyBudget": 25000,
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    }
+  ],
+  "expenses": [
+    {
+      "id": "8wLBc4p1sVCyRBNfBeoEv",
+      "userId": "demo-user",
+      "amount": 420,
+      "category": "food",
+      "note": "Lunch with the team",
+      "date": "2026-03-02",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "4JWBGGRMPhfSVNY301IhD",
+      "userId": "demo-user",
+      "amount": 1890,
+      "category": "shopping",
+      "note": "New earbuds",
+      "date": "2026-03-04",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "rBjzu1nklNX2L0EzUUotn",
+      "userId": "demo-user",
+      "amount": 260,
+      "category": "travel",
+      "note": "Metro recharge",
+      "date": "2026-03-05",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "iMXHfD2X9tu2ezVMiocWy",
+      "userId": "demo-user",
+      "amount": 760,
+      "category": "groceries",
+      "note": "Weekly groceries",
+      "date": "2026-03-06",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "s_Fsmwe1Q1hPgqZL9FA3-",
+      "userId": "demo-user",
+      "amount": 1200,
+      "category": "bills",
+      "note": "Wi-Fi bill",
+      "date": "2026-03-08",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "mApVZyIkbvCCLZ8JiMdsm",
+      "userId": "demo-user",
+      "amount": 340,
+      "category": "food",
+      "note": "Coffee catch-up",
+      "date": "2026-03-10",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "CNT38l7lEBbln8GNZiE7V",
+      "userId": "demo-user",
+      "amount": 580,
+      "category": "entertainment",
+      "note": "Movie tickets",
+      "date": "2026-03-12",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "geo48OTdac4hT3WIlGVyI",
+      "userId": "demo-user",
+      "amount": 900,
+      "category": "health",
+      "note": "Pharmacy purchase",
+      "date": "2026-03-13",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "IbpQW4i7vClKLUVIAGCj1",
+      "userId": "demo-user",
+      "amount": 310,
+      "category": "travel",
+      "note": "Cab after work",
+      "date": "2026-03-14",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "xiiYI2Gu4jTT3_tK4jfDI",
+      "userId": "demo-user",
+      "amount": 640,
+      "category": "food",
+      "note": "Dinner delivery",
+      "date": "2026-03-16",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "IjdkKIP5dTfGtZxV8_t82",
+      "userId": "demo-user",
+      "amount": 750,
+      "category": "food",
+      "note": "Weekend brunch",
+      "date": "2026-02-04",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "nVpIHspwSvMtU1Qf9nuOU",
+      "userId": "demo-user",
+      "amount": 1800,
+      "category": "shopping",
+      "note": "Sneakers",
+      "date": "2026-02-08",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "BllWtlNRD83gVGxndnn4T",
+      "userId": "demo-user",
+      "amount": 450,
+      "category": "travel",
+      "note": "Intercity bus",
+      "date": "2026-02-12",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "tTfJbfmk4EjVIXsqnv_dO",
+      "userId": "demo-user",
+      "amount": 620,
+      "category": "groceries",
+      "note": "Household essentials",
+      "date": "2026-01-09",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "NmmV042hIMqsAe5bWcHGR",
+      "userId": "demo-user",
+      "amount": 980,
+      "category": "utilities",
+      "note": "Electricity bill",
+      "date": "2026-01-13",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    },
+    {
+      "id": "zSHE1DDG0rdC_7hfya-J9",
+      "userId": "demo-user",
+      "amount": 520,
+      "category": "food",
+      "note": "Office snacks",
+      "date": "2025-12-07",
+      "createdAt": "2026-03-19T11:32:04.442Z",
+      "updatedAt": "2026-03-19T11:32:04.442Z"
+    }
+  ]
+}

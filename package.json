@@ -1,22 +1,15 @@
 {
-  "name": "mobile",
+  "name": "spendwise",
   "version": "1.0.0",
-  "main": "index.ts",
+  "private": true,
   "scripts": {
-    "start": "expo start",
-    "android": "expo start --android",
-    "ios": "expo start --ios",
-    "web": "expo start --web"
-  },
-  "dependencies": {
-    "expo": "~55.0.8",
-    "expo-status-bar": "~55.0.4",
-    "react": "19.2.0",
-    "react-native": "0.83.2"
-  },
-  "devDependencies": {
-    "@types/react": "~19.2.2",
-    "typescript": "~5.9.2"
-  },
-  "private": true
+    "mobile": "npm --prefix mobile start",
+    "android": "npm --prefix mobile run android",
+    "ios": "npm --prefix mobile run ios",
+    "server": "npm --prefix server run dev",
+    "check:server": "npm --prefix server run check",
+    "check:mobile": "npm --prefix mobile run typecheck",
+    "export:android": "npm --prefix mobile run export:android",
+    "check": "npm run check:server && npm run check:mobile"
+  }
 }
