@@ -93,10 +93,11 @@ npm run export:android
 
 The mobile app automatically uses:
 
+- the current Metro host IP on Expo Go and other dev-server runs
 - `http://127.0.0.1:4000/api` on iOS and similar local runs
 - `http://10.0.2.2:4000/api` on Android emulator
 
-For a physical phone, set your LAN IP:
+For a custom backend host, you can still override it manually:
 
 ```bash
 cd /Users/surajsingh/Downloads/SpendWise/mobile
