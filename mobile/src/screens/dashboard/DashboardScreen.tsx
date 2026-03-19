@@ -1,10 +1,10 @@
 import { Ionicons } from '@expo/vector-icons';
 import { useQuery } from '@tanstack/react-query';
 import { LinearGradient } from 'expo-linear-gradient';
-import { MotiView } from 'moti';
 import { useEffect } from 'react';
 import { Pressable, RefreshControl, StyleSheet, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
+import Animated, { FadeInDown } from 'react-native-reanimated';
 import { insightsApi, profileApi } from '../../api/endpoints';
 import { ErrorState } from '../../components/ErrorState';
 import { FloatingAddButton } from '../../components/FloatingAddButton';
@@ -80,14 +80,14 @@ export const DashboardScreen = () => {
   return (
     <View style={styles.root}>
       <Screen refreshControl={refreshControl} scroll contentContainerStyle={styles.content}>
-        <MotiView animate={{ opacity: 1, translateY: 0 }} from={{ opacity: 0, translateY: 18 }}>
+        <Animated.View entering={FadeInDown.duration(500)}>
           <Text style={[styles.greeting, { color: theme.colors.text }]}>
             Hi {user?.name ?? 'there'} 👋
           </Text>
           <Text style={[styles.caption, { color: theme.colors.textMuted }]}>
             Your money story this month, simplified and ready to act on.
           </Text>
-        </MotiView>
+        </Animated.View>
 
         <LinearGradient
           colors={['#39B267', '#2E9F5A', '#1F7B42']}

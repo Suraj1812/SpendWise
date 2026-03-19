@@ -1,10 +1,10 @@
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { MotiText, MotiView } from 'moti';
 import { Controller, useForm } from 'react-hook-form';
 import { Alert, Pressable, StyleSheet, Text, View } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 import type { NativeStackNavigationProp } from '@react-navigation/native-stack';
+import Animated, { FadeIn, FadeInDown } from 'react-native-reanimated';
 import { z } from 'zod';
 import { authApi } from '../../api/endpoints';
 import { getErrorMessage } from '../../api/client';
@@ -60,21 +60,16 @@ export const LoginScreen = () => {
 
   return (
     <Screen scroll contentContainerStyle={styles.content}>
-      <MotiView
-        animate={{ opacity: 1, translateY: 0 }}
-        from={{ opacity: 0, translateY: 20 }}
-        transition={{ duration: 700 }}
-      >
+      <Animated.View entering={FadeInDown.duration(700)}>
         <Text style={[styles.eyebrow, { color: theme.colors.primary }]}>SpendWise</Text>
         <Text style={[styles.title, { color: theme.colors.text }]}>Track smart. Spend wiser.</Text>
         <Text style={[styles.subtitle, { color: theme.colors.textMuted }]}>
           Log in fast, add expenses in seconds, and get clean monthly insights without the clutter.
         </Text>
-      </MotiView>
+      </Animated.View>
 
-      <MotiView
-        animate={{ opacity: 1, translateY: 0 }}
-        from={{ opacity: 0, translateY: 24 }}
+      <Animated.View
+        entering={FadeInDown.delay(120).duration(700)}
         style={[
           styles.card,
           {
@@ -82,7 +77,6 @@ export const LoginScreen = () => {
             borderColor: theme.colors.border,
           },
         ]}
-        transition={{ delay: 120, duration: 700 }}
       >
         <Controller
           control={control}
@@ -128,17 +122,15 @@ export const LoginScreen = () => {
           title="Continue as Guest"
           variant="ghost"
         />
-      </MotiView>
+      </Animated.View>
 
       <View style={styles.footer}>
-        <MotiText
-          animate={{ opacity: 1 }}
-          from={{ opacity: 0 }}
+        <Animated.Text
+          entering={FadeIn.delay(220).duration(700)}
           style={[styles.demoText, { color: theme.colors.textMuted }]}
-          transition={{ delay: 220, duration: 700 }}
         >
           Demo account: demo@spendwise.app / demo123
-        </MotiText>
+        </Animated.Text>
 
         <Pressable onPress={() => navigation.navigate('Signup')}>
           <Text style={[styles.switchText, { color: theme.colors.textMuted }]}>

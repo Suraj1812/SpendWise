@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { MotiView } from 'moti';
 import { RefreshControl, useWindowDimensions, StyleSheet, Text, View } from 'react-native';
+import Animated, { FadeInDown } from 'react-native-reanimated';
 import Svg, { Circle } from 'react-native-svg';
 import { insightsApi } from '../../api/endpoints';
 import { ErrorState } from '../../components/ErrorState';
@@ -165,9 +165,8 @@ export const InsightsScreen = () => {
 
             return (
               <View key={item.month} style={styles.barSlot}>
-                <MotiView
-                  animate={{ opacity: 1, translateY: 0 }}
-                  from={{ opacity: 0, translateY: 18 }}
+                <Animated.View
+                  entering={FadeInDown.delay(index * 70).duration(500)}
                   style={[
                     styles.bar,
                     {
@@ -177,7 +176,6 @@ export const InsightsScreen = () => {
                       height,
                     },
                   ]}
-                  transition={{ delay: index * 70, duration: 500 }}
                 />
                 <Text style={[styles.barValue, { color: theme.colors.textMuted }]}>
                   ₹{Math.round(item.total / 1000)}k

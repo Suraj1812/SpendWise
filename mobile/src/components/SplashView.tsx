@@ -1,37 +1,22 @@
 import { LinearGradient } from 'expo-linear-gradient';
-import { MotiText, MotiView } from 'moti';
 import { StyleSheet, View } from 'react-native';
+import Animated, { FadeInDown, ZoomIn } from 'react-native-reanimated';
 import { fontFamilies } from '../constants/theme';
 
 export const SplashView = () => {
   return (
     <LinearGradient colors={['#F4FFF7', '#E8FFF0', '#D4F8DE']} style={styles.container}>
-      <MotiView
-        animate={{ opacity: 1, scale: 1, translateY: 0 }}
-        from={{ opacity: 0, scale: 0.86, translateY: 16 }}
-        style={styles.logoWrap}
-        transition={{ type: 'timing', duration: 900 }}
-      >
+      <Animated.View entering={ZoomIn.duration(900)} style={styles.logoWrap}>
         <View style={styles.logoInner} />
-      </MotiView>
+      </Animated.View>
 
-      <MotiText
-        animate={{ opacity: 1, translateY: 0 }}
-        from={{ opacity: 0, translateY: 18 }}
-        style={styles.title}
-        transition={{ delay: 200, duration: 800 }}
-      >
+      <Animated.Text entering={FadeInDown.delay(200).duration(800)} style={styles.title}>
         SpendWise
-      </MotiText>
+      </Animated.Text>
 
-      <MotiText
-        animate={{ opacity: 1, translateY: 0 }}
-        from={{ opacity: 0, translateY: 18 }}
-        style={styles.subtitle}
-        transition={{ delay: 320, duration: 800 }}
-      >
+      <Animated.Text entering={FadeInDown.delay(320).duration(800)} style={styles.subtitle}>
         Track smart. Spend wiser.
-      </MotiText>
+      </Animated.Text>
     </LinearGradient>
   );
 };
@@ -77,4 +62,3 @@ const styles = StyleSheet.create({
     marginTop: 10,
   },
 });
-
